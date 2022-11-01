@@ -1,0 +1,52 @@
+basicSelenium/RegisterAndPWD.java
+ basicSelenium.RegisterAndPWD
+cleanTest/LoginTest.java
+ cleanTest.LoginTest
+pages/todoLy/LoginModal.java
+ pages.todoLy.LoginModal
+singletonSession/Session.java
+ singletonSession.Session
+factoryBrowser/Cloud.java
+ factoryBrowser.Cloud
+factoryBrowser/IBrowser.java
+ factoryBrowser.IBrowser
+cleanTest/TestBaseTodoLy.java
+ cleanTest.TestBaseTodoLy
+cleanTest/CRUDProjectTest.java
+ cleanTest.CRUDProjectTest
+controlSelenium/Control.java
+ controlSelenium.Control
+cleanTest/RegisterAndPwd.java
+ cleanTest.RegisterAndPwd
+basicJunit/BasicJUnit.java
+ basicJunit.BasicJUnit
+cleanTest/ChangeNameTest.java
+ cleanTest.ChangeNameTest
+factoryBrowser/Firefox.java
+ factoryBrowser.Firefox
+pages/todoLy/RegisterModal.java
+ pages.todoLy.RegisterModal
+controlSelenium/CheckBox.java
+ controlSelenium.CheckBox
+pages/todoLy/MainPage.java
+ pages.todoLy.MainPage
+basicSelenium/CRUDProjectTest.java
+ basicSelenium.CRUDProjectTest
+pages/todoLy/SettingsPage.java
+ pages.todoLy.SettingsPage
+controlSelenium/Button.java
+ controlSelenium.Button
+factoryBrowser/FactoryBrowser.java
+ factoryBrowser.FactoryBrowser
+controlSelenium/Label.java
+ controlSelenium.Label
+pages/todoLy/MenuSection.java
+ pages.todoLy.MenuSection
+basicSelenium/FullNameChange.java
+ basicSelenium.FullNameChange
+controlSelenium/TextBox.java
+ controlSelenium.TextBox
+factoryBrowser/Chrome.java
+ factoryBrowser.Chrome
+basicSelenium/itemTodoLy.java
+ basicSelenium.itemTodoLy
