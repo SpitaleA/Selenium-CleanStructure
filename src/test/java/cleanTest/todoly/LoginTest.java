@@ -4,6 +4,10 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import utils.GetProperties;
+
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class LoginTest extends  TestBaseTodoLy{
     @Test
@@ -17,13 +21,16 @@ public class LoginTest extends  TestBaseTodoLy{
     @Feature("Authentication")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Story login")
+    @ExtendWith(logger.class)
     public void verifyLoginSuccessfully(){
-        mainPage.loginButton.click();
-        loginModal.emailTextBox.setText("selenium@selenium2022.com");
-        loginModal.passwordTextBox.setText("12345");
-        loginModal.loginButton.click();
-        Assertions.assertTrue(menuSection.logoutButton.isControlDisplayed(),
-                "ERROR login was not successfully");
 
+            mainPage.loginButton.click();
+            loginModal.emailTextBox.setText(GetProperties.getInstance().getUser());
+            loginModal.passwordTextBox.setText("");
+            loginModal.passwordTextBox.setText(GetProperties.getInstance().getPwd());
+            loginModal.loginButton.click();
+
+            Assertions.assertTrue(menuSection.logoutButton.isControlDisplayed(),
+                    "ERROR login was not successfully");
     }
 }
