@@ -33,11 +33,11 @@ public class Control {
     public void step(String action){}
     protected void findControl(){
         control= Session.getInstance().getBrowser().findElement(this.locator);
-        controls = Session.getInstance().getBrowser().findElements(this.locator);
+//        controls = Session.getInstance().getBrowser().findElements(this.locator);
     }
 
     public void click(){
-        waitPresence();
+//        waitPresence();
         this.findControl();
         this.step("click on CONTROL " +controlName);
         control.click();
@@ -89,8 +89,7 @@ public class Control {
 
 
     //********************              ACTIONS              ********************
-    public void makeRightClickAction()
-    {
+    public void makeRightClickAction(){
         this.findControl();
         Actions action = new Actions(Session.getInstance().getBrowser());
         action.contextClick(this.control).perform();
@@ -130,6 +129,10 @@ public class Control {
     public void waitInvisibility(){
         WebDriverWait wait = new WebDriverWait(Session.getInstance().getBrowser(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(this.locator));
+    }
+    public void waitIFrameToBeSwitchable(){
+        WebDriverWait wait = new WebDriverWait(Session.getInstance().getBrowser(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe")));
     }
     public void waitVisibility(){
         WebDriverWait wait = new WebDriverWait(Session.getInstance().getBrowser(), Duration.ofSeconds(10));

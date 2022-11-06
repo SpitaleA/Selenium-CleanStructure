@@ -1,5 +1,6 @@
 package factoryBrowser;
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,6 +23,7 @@ public class Chrome implements IBrowser {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 
         //Maximizar ventana
+        driver.manage().window().setPosition(new Point(2000, 1));
         driver.manage().window().maximize();
         return driver;
     }

@@ -1,37 +1,48 @@
-basicSelenium/RegisterAndPWD.java
- basicSelenium.RegisterAndPWD
-cleanTest/LoginTest.java
- cleanTest.LoginTest
+utils/Watcher.java
+ utils.Watcher
+ utils.Watcher$TestResultStatus
+cleanTest/todoly/LoginParameterTest.java
+ cleanTest.todoly.LoginParameterTest
 pages/todoLy/LoginModal.java
  pages.todoLy.LoginModal
+utils/Attach.java
+ utils.Attach
 singletonSession/Session.java
  singletonSession.Session
+factoryBrowser/Headless.java
+ factoryBrowser.Headless
 factoryBrowser/Cloud.java
  factoryBrowser.Cloud
 factoryBrowser/IBrowser.java
  factoryBrowser.IBrowser
-cleanTest/TestBaseTodoLy.java
- cleanTest.TestBaseTodoLy
-cleanTest/CRUDProjectTest.java
- cleanTest.CRUDProjectTest
 controlSelenium/Control.java
  controlSelenium.Control
-cleanTest/RegisterAndPwd.java
- cleanTest.RegisterAndPwd
-basicJunit/BasicJUnit.java
- basicJunit.BasicJUnit
-cleanTest/ChangeNameTest.java
- cleanTest.ChangeNameTest
+factoryBrowser/Edge.java
+ factoryBrowser.Edge
+cleanTest/todoly/LoginTest.java
+ cleanTest.todoly.LoginTest
+utils/GetProperties.java
+ utils.GetProperties
+pages/phpTravels/RegisterPage.java
+ pages.phpTravels.RegisterPage
 factoryBrowser/Firefox.java
  factoryBrowser.Firefox
 pages/todoLy/RegisterModal.java
  pages.todoLy.RegisterModal
+cleanTest/phpTravel/RunnerExtension.java
+ cleanTest.phpTravel.RunnerExtension
 controlSelenium/CheckBox.java
  controlSelenium.CheckBox
 pages/todoLy/MainPage.java
  pages.todoLy.MainPage
-basicSelenium/CRUDProjectTest.java
- basicSelenium.CRUDProjectTest
+cleanTest/todoly/ChangeNameTest.java
+ cleanTest.todoly.ChangeNameTest
+pages/todoLy/LeftPanelSection.java
+ pages.todoLy.LeftPanelSection
+cleanTest/todoly/RegisterAndPwd.java
+ cleanTest.todoly.RegisterAndPwd
+cleanTest/todoly/TestBaseTodoLy.java
+ cleanTest.todoly.TestBaseTodoLy
 pages/todoLy/SettingsPage.java
  pages.todoLy.SettingsPage
 controlSelenium/Button.java
@@ -42,11 +53,21 @@ controlSelenium/Label.java
  controlSelenium.Label
 pages/todoLy/MenuSection.java
  pages.todoLy.MenuSection
-basicSelenium/FullNameChange.java
- basicSelenium.FullNameChange
+cleanTest/todoly/CRUDProjectTest.java
+ cleanTest.todoly.CRUDProjectTest
+pages/phpTravels/LoginPage.java
+ pages.phpTravels.LoginPage
+pages/phpTravels/LoggedInPage.java
+ pages.phpTravels.LoggedInPage
 controlSelenium/TextBox.java
  controlSelenium.TextBox
 factoryBrowser/Chrome.java
  factoryBrowser.Chrome
-basicSelenium/itemTodoLy.java
- basicSelenium.itemTodoLy
+cleanTest/phpTravel/TestSuite1.java
+ cleanTest.phpTravel.TestSuite1
+cleanTest/phpTravel/TestBasePhpTravel.java
+ cleanTest.phpTravel.TestBasePhpTravel
+pages/phpTravels/MainPage.java
+ pages.phpTravels.MainPage
+factoryBrowser/BrowserDocker.java
+ factoryBrowser.BrowserDocker

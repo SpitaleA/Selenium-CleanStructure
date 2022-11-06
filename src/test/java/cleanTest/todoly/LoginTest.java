@@ -3,12 +3,15 @@ package cleanTest.todoly;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+
 import utils.GetProperties;
+import utils.Watcher;
 
 import static org.junit.jupiter.api.Assertions.fail;
-
+@Tag("Sanity")
 public class LoginTest extends  TestBaseTodoLy{
     @Test
     @DisplayName("Verify user can log in")
@@ -21,7 +24,8 @@ public class LoginTest extends  TestBaseTodoLy{
     @Feature("Authentication")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Story login")
-    @ExtendWith(logger.class)
+    @ExtendWith(Watcher.class)
+    @Tag("SmokeTest")
     public void verifyLoginSuccessfully(){
 
             mainPage.loginButton.click();

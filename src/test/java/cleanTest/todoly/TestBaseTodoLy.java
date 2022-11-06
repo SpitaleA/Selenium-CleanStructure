@@ -1,23 +1,14 @@
 package cleanTest.todoly;
 
 import io.qameta.allure.Attachment;
-import org.apiguardian.api.API;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.Extension;
-import org.junit.jupiter.api.extension.ExtensionContext;
-import org.junit.jupiter.api.extension.RegisterExtension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import pages.todoLy.*;
 import singletonSession.Session;
 import utils.GetProperties;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
-import static org.apiguardian.api.API.Status.STABLE;
+import utils.Watcher;
 
 
 public class TestBaseTodoLy {
@@ -34,6 +25,7 @@ public class TestBaseTodoLy {
     }
     @AfterEach
     public void cleanup(){
+        Watcher watcher = new Watcher();
 //        attach();
 //        Session.getInstance().closeBrowser();
     }

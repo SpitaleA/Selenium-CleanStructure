@@ -1,4 +1,4 @@
-package cleanTest.todoly;
+package utils;
 
 import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -16,7 +16,8 @@ import java.util.stream.Collectors;
 
 import static org.openqa.selenium.remote.http.DumpHttpExchangeFilter.LOG;
 
-public class logger implements TestWatcher {
+
+public class Watcher implements TestWatcher {
     private List<TestResultStatus> testResultsStatus = new ArrayList<>();
 
     private enum TestResultStatus {
@@ -26,30 +27,25 @@ public class logger implements TestWatcher {
     public void testDisabled(ExtensionContext context, Optional<String> reason) {
         LOG.info("Test Disabled for test {}: with reason :- {}"
         );
-
         testResultsStatus.add(TestResultStatus.DISABLED);
     }
 
     @Override
     public void testSuccessful(ExtensionContext context) {
         LOG.info("Test Successful for test {}: ");
-        attach();
         testResultsStatus.add(TestResultStatus.SUCCESSFUL);
         Session.getInstance().closeBrowser();
     }
     @Override
     public void testAborted(ExtensionContext context, Throwable cause) {
         LOG.info("Test Aborted for test {}: ");
-//        attach();
         testResultsStatus.add(TestResultStatus.ABORTED);
     }
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
         LOG.info("Test Failed for test {}: ");
-        attach();
         testResultsStatus.add(TestResultStatus.FAILED);
-        Session.getInstance().closeBrowser();
     }
 
 
@@ -60,9 +56,4 @@ public class logger implements TestWatcher {
         LOG.info("Test result summary for {} {}");
     }
 
-    @Attachment(value = "screenshot",type = "image/png")
-    public byte[] attach(){
-        // tomar captura de pantalla - adjuntarlo en el reporte
-        return ((TakesScreenshot) Session.getInstance().getBrowser()).getScreenshotAs(OutputType.BYTES);
-    }
 }
